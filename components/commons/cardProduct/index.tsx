@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import IBarang from "@/interfaces/barang";
 import isNewProduct from "@/utils/isNewProduct";
-import { trackProduct } from "@/utils/trackProduct";
 import { useRouter } from "next/navigation";
 
 export default function CardProduct({

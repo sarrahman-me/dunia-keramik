@@ -40,12 +40,11 @@ export async function generateMetadata({
 export default async function Page({
   params,
 }: {
-  params: { sku: string; id_webstore: string };
+  params: { sku: string; };
 }) {
   const response = await GetDataApi(
     `${process.env.NEXT_PUBLIC_HOST}/products/${params.sku}?`
   );
-
 
   const data: IBarangWebstore = response.data.data;
   const barang: IBarang = data.barang;

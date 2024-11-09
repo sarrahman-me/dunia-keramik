@@ -1,6 +1,6 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import { Select, TipsText } from "@/components/commons";
-//import Image from "next/image";
 import React, { useState } from "react";
 
 type VisualPatternProps = {
