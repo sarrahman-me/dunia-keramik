@@ -96,7 +96,7 @@ export default async function Page({
       <VisualPattern imageUrl={barang.gambar_url} />
 
       {/* Whatsapp Button */}
-      <ButtonPesanWhatsapp barang={barang} whatsapp={"082157758174"} />
+      <ButtonPesanWhatsapp barang={barang} whatsapp={"+6282157758174"} />
 
       {/* similiar product */}
       <SimiliarProducts barang={barang} />
