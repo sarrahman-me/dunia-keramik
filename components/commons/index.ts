@@ -10,6 +10,7 @@ import Select from "./select";
 import SwitchToggle from "./switchToggle";
 import Textfield from "./textfield";
 import TipsText from "./tipsText";
+import WhatsappIcon from "./whatsappIcon";
 
 
 export {
@@ -24,5 +25,6 @@ export {
   Label,
   Textfield,
   SwitchToggle,
-  FileInput
+  FileInput,
+  WhatsappIcon
 }

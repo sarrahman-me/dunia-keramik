@@ -1,4 +1,4 @@
-import { SearchBar } from "@/components/commons";
+import { SearchBar, WhatsappIcon } from "@/components/commons";
 import NotFound404 from "@/public/svg/product-404.svg";
 import { MdSearch } from "react-icons/md";
 import { CatalogProducts } from "@/components/layouts";
@@ -52,6 +52,8 @@ export default async function Page({
   return (
     <div className="space-y-6">
       <SearchBar route={`/barang/search`} />
+
+      {/* Catalog barang */}
       {searchParams.query.trim() !== "" && (
         <span className="flex items-center space-x-2 text-xs text-primary-600">
           <MdSearch />
@@ -63,6 +65,9 @@ export default async function Page({
         staticData
         products={barang}
       />
+
+      {/* Whatsapp icon */}
+      <WhatsappIcon />
     </div>
   );
 }

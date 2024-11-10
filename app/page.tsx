@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { SearchBar } from "@/components/commons";
+import { SearchBar, WhatsappIcon } from "@/components/commons";
 import { CatalogProducts, RecomendationProducts } from "@/components/layouts";
 import { MotifList } from "@/components/spesific";
 import { Metadata } from "next";
@@ -65,6 +65,9 @@ export default async function Home() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
+
+      {/* Whatsapp icon */}
+      <WhatsappIcon />
     </div>
   )
 }
