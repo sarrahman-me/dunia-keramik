@@ -41,7 +41,9 @@ export function getTrackerProducts(): string[] {
     const productsTracker: TrackedProduct[] = JSON.parse(currentData);
 
     // Return just the SKUs
-    return productsTracker.map((product) => product.sku);
+    return productsTracker
+      .map((product) => product.sku)
+      .reverse();
   } else {
     return [];
   }
