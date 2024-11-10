@@ -1,22 +1,20 @@
-"use client";
 import { SearchBar } from "@/components/commons";
 import { CatalogProducts } from "@/components/layouts";
-import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
-export default function Page() {
-  const searchParams = useSearchParams();
-  const kategori = searchParams.get("kategori");
-  const ukuran = searchParams.get("ukuran");
-  const motif = searchParams.get("motif");
-  const queryAtribute = `kategori=${kategori || ""}&ukuran=${ukuran || ""
-    }&motif=${motif || ""}`;
+export default function Page({
+  searchParams,
+}: {
+  searchParams: { kategori: string, ukuran: string, motif: string };
+}) {
+  const queryAtribute = `kategori=${searchParams.kategori || ""}&ukuran=${searchParams.ukuran || ""
+    }&motif=${searchParams.motif || ""}`;
 
   return (
     <div>
       <SearchBar />
       <p className="underline font-semibold m-2">
-        Pilihan {kategori} {ukuran} {motif}
+        Pilihan {searchParams.kategori} {searchParams.ukuran} {searchParams.motif}
       </p>
       <Suspense fallback={<div>Loading...</div>}>
         <CatalogProducts atributQuery={queryAtribute} />
