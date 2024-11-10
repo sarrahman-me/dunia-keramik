@@ -2,6 +2,7 @@
 "use client";
 import IBarang from "@/interfaces/barang";
 import isNewProduct from "@/utils/isNewProduct";
+import { trackProduct } from "@/utils/trackProduct";
 import { useRouter } from "next/navigation";
 
 export default function CardProduct({
@@ -24,7 +25,8 @@ export default function CardProduct({
   return (
     <div
       onClick={() => {
-        router.push(route ? route : `/dashboard/barang/${barang.sku}`);
+        trackProduct(barang.sku);
+        router.push(route ? route : `/barang/${barang.sku}`);
       }}
       className="bg-white border cursor-pointer hover:shadow-sm rounded"
     >

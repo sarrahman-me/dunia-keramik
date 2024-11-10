@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { SearchBar } from "@/components/commons";
-import { CatalogProducts } from "@/components/layouts";
+import { CatalogProducts, RecomendationProducts } from "@/components/layouts";
 import { MotifList } from "@/components/spesific";
 import { Metadata } from "next";
 import { Suspense } from "react";
@@ -35,6 +35,8 @@ export default async function Home() {
 
       {/* Textured */}
       <MotifList />
+
+      <RecomendationProducts />
 
       {/* catalog */}
       <div className="space-y-3">

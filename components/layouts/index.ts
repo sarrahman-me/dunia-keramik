@@ -3,15 +3,17 @@ import BottomBarNavigation from "./bottomBar";
 import CatalogProducts from "./catalogProducts";
 import Kalkulator from "./kalkulatorKeramik";
 import RecomendByProduct from "./recomendationByProduct";
+import RecomendationProducts from "./recomendationProducts";
 import SimiliarProducts from "./similiarProducts";
 import VisualPattern from "./visualPattern";
 
 export {
   AppBar,
   CatalogProducts,
-  RecomendByProduct,
+  RecomendationProducts,
   SimiliarProducts,
   VisualPattern,
   Kalkulator,
-  BottomBarNavigation
+  BottomBarNavigation,
+  RecomendByProduct
 }

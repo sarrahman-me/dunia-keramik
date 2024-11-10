@@ -9,7 +9,7 @@ export default function SearchBar({ route }: { route?: string }) {
   const handleSearch = (e: FormEvent) => {
     e.preventDefault();
 
-    router.push(`${route || `/dashboard/barang/search`}?query=${q}`);
+    router.push(`${route || `/barang/search`}?query=${q}`);
   };
 
   return (
