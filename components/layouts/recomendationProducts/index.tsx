@@ -39,6 +39,8 @@ export default async function RecomendationProducts() {
     return null
   }
 
+  const reversedProducts = products.reverse();
+
   return (
     <div className="space-y-2">
       <div>
@@ -47,7 +49,7 @@ export default async function RecomendationProducts() {
         </p>
         <CatalogProducts
           staticData
-          products={products}
+          products={reversedProducts}
         />
       </div>
     </div>
