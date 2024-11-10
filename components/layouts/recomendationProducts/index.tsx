@@ -44,9 +44,7 @@ export default async function RecomendationProducts() {
   return (
     <div className="space-y-2">
       <div>
-        <p className="p-2 font-medium text-secondary-medium">
-          Kamu Mungkin Juga Suka
-        </p>
+        <p className="p-2 font-medium text-secondary-medium">Rekomendasi Untukmu</p>
         <CatalogProducts
           staticData
           products={reversedProducts}

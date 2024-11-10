@@ -33,10 +33,10 @@ export default async function Home() {
         <img width="1200" height="520" className="rounded" src="https://tokokeramik-assets.s3.amazonaws.com/banner-dunia-keramik-9005" alt="banner" />
       </div>
 
+      <RecomendationProducts />
+
       {/* Textured */}
       <MotifList />
-
-      <RecomendationProducts />
 
       {/* catalog */}
       <div className="space-y-3">
