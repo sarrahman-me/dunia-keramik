@@ -10,9 +10,9 @@ interface ICatalogProduct {
   atributQuery?: string;
   pagination?: boolean;
   limit?: number;
-  products?: IBarang[]; // hanya digunakan untuk rewrite barang dari parent
-  staticData?: boolean; // true jika barang akan ditulis ulang dari parent
-  setLengthProducts?: (l: number) => void; // untuk mendapatkan
+  products?: IBarang[];
+  staticData?: boolean;
+  setLengthProducts?: (l: number) => void;
 }
 
 interface resultInterface {
@@ -55,7 +55,6 @@ export default function CatalogProducts({
 
         setResult({ data, metadata });
 
-        // mengirim jumlah data
         if (setLengthProducts) {
           setLengthProducts(data.length);
         }
@@ -75,7 +74,6 @@ export default function CatalogProducts({
   if (loading) {
     return (
       <div className="space-y-5 animate-pulse">
-        {/* <div className="bg-gradient-to-b from-primary-700 to-primary-500 h-20"></div> */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2">
           {Array.from({ length: 48 }).map((_, i) => (
             <div key={i} className="h-52 bg-secondary" />

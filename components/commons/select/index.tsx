@@ -93,13 +93,12 @@ const Select = ({
             <ListboxOption key={i} value={list}>
               {({ focus, selected }) => (
                 <div
-                  className={`${
-                    selected
+                  className={`${selected
                       ? "bg-primary-500 text-white"
                       : focus
-                      ? "bg-primary-50 text-primary-800"
-                      : "bg-white text-black"
-                  } cursor-pointer select-none p-1.5 rounded-md`}
+                        ? "bg-primary-50 text-primary-800"
+                        : "bg-white text-black"
+                    } cursor-pointer select-none p-1.5 rounded-md`}
                 >
                   {list[keyValue.value]}
                 </div>

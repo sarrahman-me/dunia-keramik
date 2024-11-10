@@ -2,15 +2,6 @@
 "use client";
 import { FaTrash } from "react-icons/fa6";
 
-/**
- * Komponen FileInput digunakan untuk mengunggah file dan, jika diaktifkan, menampilkan pratinjau file gambar.
- *
- * @param {string} label - Label yang ditampilkan di atas elemen input file.
- * @param {string} error - Pesan kesalahan yang ditampilkan jika terjadi kesalahan validasi.
- * @param {function} setFile - Fungsi yang dipanggil saat file dipilih untuk menyimpan file (dalam format base64 as string[]).
- * @param {boolean} previewFile - Jika benar, akan menampilkan pratinjau file gambar.
- */
-
 interface FileInputProps {
   label?: string;
   error?: string;
@@ -29,8 +20,6 @@ const FileInput = ({
   const handleFileChange = (event: any) => {
     if (event.target.files && event.target.files[0]) {
       const file = event.target.files[0];
-      // const nameFile = file.name;
-      // const typeFile = file.type;
 
       const reader = new FileReader();
       reader.onloadend = () => {

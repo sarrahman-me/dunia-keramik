@@ -13,10 +13,8 @@ export default function CardProduct({
 }) {
   const router = useRouter();
 
-  // cek apakah barang baru
   const isNew = isNewProduct(barang.created_at);
 
-  // menghilangkan fungsi klik kanan pada gambar
   const handleKlikKanan = (e: any) => {
     e.preventDefault();
 

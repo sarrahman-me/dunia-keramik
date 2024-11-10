@@ -111,7 +111,6 @@ const ImagePattern = ({ imageUrl }: ImagePatternProps) => {
     setRotation((prevRotation) => prevRotation + 90);
   };
 
-  // menghilangkan fungsi klik kanan pada gambar
   const handleKlikKanan = (e: any) => {
     e.preventDefault();
 

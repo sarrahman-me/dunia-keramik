@@ -24,7 +24,7 @@ interface InputGroupProps {
       value: string;
     };
   }[];
-  setData: ({}: any) => void;
+  setData: ({ }: any) => void;
   data: any;
   error?: {
     fields: any;

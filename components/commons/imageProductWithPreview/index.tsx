@@ -7,7 +7,6 @@ const ImageProductWithPreview = ({
 }: {
   product: Partial<IBarang>;
 }) => {
-  // menghilangkan fungsi klik kanan pada gambar
   const handleKlikKanan = (e: any) => {
     e.preventDefault();
 

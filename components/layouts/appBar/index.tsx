@@ -14,7 +14,6 @@ export default function AppBar({
   const router = useRouter();
   const pathname = usePathname();
 
-  // Objek pemetaan antara judul navigasi dan URL yang sesuai
   const navigationMap: Record<string, string> = {
     Home: `/`,
     Barang: `/barang`,
