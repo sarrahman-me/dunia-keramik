@@ -1,7 +1,8 @@
 "use client";
 import { SearchBar } from "@/components/commons";
-import { AppBar, CatalogProducts } from "@/components/layouts";
+import { CatalogProducts } from "@/components/layouts";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 export default function Page() {
   const searchParams = useSearchParams();
@@ -13,12 +14,13 @@ export default function Page() {
 
   return (
     <div>
-      <AppBar arrowBack />
       <SearchBar />
       <p className="underline font-semibold m-2">
         Pilihan {kategori} {ukuran} {motif}
       </p>
-      <CatalogProducts atributQuery={queryAtribute} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <CatalogProducts atributQuery={queryAtribute} />
+      </Suspense>
     </div>
   );
 }
