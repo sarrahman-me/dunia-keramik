@@ -15,23 +15,19 @@ export function trackProduct(sku: string) {
 
   const threeDaysInMillisecond = 7 * 24 * 60 * 60 * 1000;
 
-  // Hapus produk yang sudah lebih dari 7 hari
   productsTracker = productsTracker.filter(
     (product) => Date.now() - product.timestamp <= threeDaysInMillisecond
   );
 
-  // Periksa apakah SKU sudah ada dalam array
   const isAlreadyTracked = productsTracker.some(
     (product) => product.sku === sku
   );
 
-  // Jika SKU belum ada dalam array, tambahkan ke dalam array
   if (!isAlreadyTracked) {
     productsTracker.push({ sku, timestamp: Date.now() });
   }
 
-  // Simpan kembali array ke cookie
-  setCookie("X-Preferred-SKUs", JSON.stringify(productsTracker));
+  setCookie("X-Preferred-SKUs", JSON.stringify(productsTracker), { maxAge: 60 * 60 * 24 * 365 });
 }
 
 export function getTrackerProducts(): string[] {
@@ -40,7 +36,6 @@ export function getTrackerProducts(): string[] {
   if (currentData) {
     const productsTracker: TrackedProduct[] = JSON.parse(currentData);
 
-    // Return just the SKUs
     return productsTracker
       .map((product) => product.sku)
       .reverse();
