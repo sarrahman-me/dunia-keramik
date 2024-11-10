@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { SearchBar } from "@/components/commons";
 import { CatalogProducts } from "@/components/layouts";
+import { MotifList } from "@/components/spesific";
 import { Metadata } from "next";
 import { Suspense } from "react";
 
@@ -31,6 +32,9 @@ export default async function Home() {
       <div className="flex justify-center w-full rounded">
         <img width="1200" height="520" className="rounded" src="https://tokokeramik-assets.s3.amazonaws.com/banner-dunia-keramik-9005" alt="banner" />
       </div>
+
+      {/* Textured */}
+      <MotifList />
 
       {/* catalog */}
       <Suspense fallback={<div>Loading...</div>}>
