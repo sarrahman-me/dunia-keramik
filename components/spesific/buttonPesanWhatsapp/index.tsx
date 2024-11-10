@@ -27,7 +27,7 @@ export default function ButtonPesanWhatsapp({
   return (
     <button
       onClick={handlePesan}
-      className={`w-full p-1.5 px-2.5 bg-gradient-to-tr from-green-500 to-green-600 text-white rounded-md hover:shadow-md disabled:opacity-30 disabled:cursor-not-allowed`}
+      className={`w-full p-1.5 px-2.5 bg-gradient-to-tr from-green-500 to-green-600 text-white rounded hover:shadow disabled:opacity-30 disabled:cursor-not-allowed`}
     >
       <span className="flex justify-center items-center">
         <RiWhatsappFill className="text-white text-2xl mr-2" />

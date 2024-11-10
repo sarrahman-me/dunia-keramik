@@ -21,7 +21,7 @@ export default function AppBar({
   };
 
   return (
-    <section className="flex justify-between bg-white p-4 text-secondary-medium shadow rounded-md items-center">
+    <section className="flex justify-between bg-white p-4 text-secondary-medium shadow rounded items-center">
       {arrowBack && (
         <IoMdArrowBack
           onClick={() => router.back()}

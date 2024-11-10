@@ -11,7 +11,7 @@ export default function Page({
     }&motif=${searchParams.motif || ""}`;
 
   return (
-    <div>
+    <div className="space-y-5">
       <SearchBar />
       <p className="p-2 font-medium text-secondary-medium">
         Pilihan {searchParams.kategori} {searchParams.ukuran} {searchParams.motif}

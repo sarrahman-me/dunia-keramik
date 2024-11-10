@@ -82,23 +82,23 @@ const Select = ({
 
       <Listbox value={selectedItem} onChange={handleSelectChange}>
         {/* tombol untuk pilih data */}
-        <ListboxButton className="flex justify-between items-center border text-black bg-white focus:border-primary-600 p-1.5 outline-none disabled:border-gray-500 disabled:cursor-not-allowed w-full rounded-md">
+        <ListboxButton className="flex justify-between items-center border text-black bg-white focus:border-primary-600 p-1.5 outline-none disabled:border-gray-500 disabled:cursor-not-allowed w-full rounded">
           <p>{selectedItem[keyValue.value] || placeholder}</p>
           <IoIosArrowDown />
         </ListboxButton>
 
         {/* pilihan listbox */}
-        <ListboxOptions className="mt-2 p-1.5 border border-primary-600 ring-primary-600 bg-white rounded-md shadow-md max-h-48 overflow-scroll outline-none">
+        <ListboxOptions className="mt-2 p-1.5 border border-primary-600 ring-primary-600 bg-white rounded shadow max-h-48 overflow-scroll outline-none">
           {dataToUse.map((list, i) => (
             <ListboxOption key={i} value={list}>
               {({ focus, selected }) => (
                 <div
                   className={`${selected
-                      ? "bg-primary-500 text-white"
-                      : focus
-                        ? "bg-primary-50 text-primary-800"
-                        : "bg-white text-black"
-                    } cursor-pointer select-none p-1.5 rounded-md`}
+                    ? "bg-primary-500 text-white"
+                    : focus
+                      ? "bg-primary-50 text-primary-800"
+                      : "bg-white text-black"
+                    } cursor-pointer select-none p-1.5 rounded`}
                 >
                   {list[keyValue.value]}
                 </div>

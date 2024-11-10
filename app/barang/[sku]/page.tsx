@@ -54,7 +54,7 @@ export default async function Page({
       <div className="w-full flex flex-col md:flex-row gap-5">
         <ImageProductWithPreview product={barang} />
 
-        <div className="bg-white border rounded-md w-full md:w-2/3 space-y-4 p-2 md:p-3">
+        <div className="bg-white border rounded w-full md:w-2/3 space-y-4 p-2 md:p-3">
           <p className="font-semibold text-lg md:text-xl lg:text-2xl">
             {barang.nama_barang}
           </p>
@@ -77,8 +77,8 @@ export default async function Page({
 
       {/* spesifikasi barang */}
       {barang.kualitas || barang.tekstur || barang.motif || barang.ukuran ? (
-        <div className="bg-white border rounded-md p-1 md:p-2 space-y-3">
-          <p className="bg-secondary text-primary-900 p-0.5 rounded-md font-medium text-lg">
+        <div className="bg-white border rounded p-1 md:p-2 space-y-3">
+          <p className="bg-secondary text-primary-900 p-0.5 rounded font-medium text-lg">
             Spesifikasi Barang
           </p>
           {barang.ukuran && <DisplayData title="ukuran" data={barang.ukuran} />}

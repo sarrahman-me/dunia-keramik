@@ -53,7 +53,7 @@ export default function MotifList() {
             className="p-2 cursor-pointer relative"
           >
             <Image
-              className="rounded-md h-28 md:h-36"
+              className="rounded h-28 md:h-36"
               src={motif.image}
               alt={motif.title}
             />

@@ -52,8 +52,8 @@ export default async function Home() {
 
 
       {/* maps url */}
-      <div className=" border rounded-md p-1 md:p-2 space-y-3">
-        <p className="bg-secondary text-primary-900 p-0.5 rounded-md font-medium text-lg">
+      <div className=" border rounded p-1 md:p-2 space-y-3">
+        <p className="bg-secondary text-primary-900 p-0.5 rounded font-medium text-lg">
           Alamat Toko
         </p>
         <iframe

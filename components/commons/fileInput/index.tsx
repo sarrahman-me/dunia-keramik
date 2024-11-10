@@ -78,7 +78,7 @@ const FileInput = ({
   //   "classNameFileInput" adalah style class tailwind untuk file input
   const classNameFileInput = `block w-full text-sm text-slate-500 file:cursor-pointer
         file:mr-4 file:py-2 file:px-4
-        file:rounded-md file:border-0
+        file:rounded file:border-0
         file:text-sm file:font-semibold
         file:bg-primary-50 file:text-primary-700
         hover:file:bg-primary-100`;

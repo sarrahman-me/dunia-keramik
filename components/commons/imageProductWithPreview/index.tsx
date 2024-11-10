@@ -17,7 +17,7 @@ const ImageProductWithPreview = ({
     return (
       <div
         onContextMenu={handleKlikKanan}
-        className="flex justify-center items-center bg-secondary rounded-md w-full md:w-1/3"
+        className="flex justify-center items-center bg-secondary rounded w-full md:w-1/3"
       >
         <img
           src={
@@ -40,7 +40,7 @@ const ImageProductWithPreview = ({
           }
           alt={product.nama_barang}
         />
-        <div className="absolute bottom-0 right-5 border shadow-lg shadow-slate-400 dark:shadow-slate-600">
+        <div className="absolute bottom-0 right-5 border shadow shadow-slate-400 dark:shadow-slate-600">
           <img
             className="max-h-32 sm:max-h-36 md:max-h-32 xl:max-h-40"
             src={

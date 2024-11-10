@@ -14,7 +14,7 @@ export default function BottomBarNavigation() {
   };
 
   return (
-    <aside className="bg-white grid grid-cols-3 p-1 rounded-md shadow-lg select-none">
+    <aside className="bg-white grid grid-cols-3 p-1 rounded shadow-lg select-none">
       {webstore_navigation.map((item, i) => {
         const isActive = isActivePage(
           navigationMap[item.title],
@@ -24,15 +24,13 @@ export default function BottomBarNavigation() {
           <Link
             key={i}
             href={navigationMap[item.title]}
-            className={`flex flex-col justify-center items-center p-1 rounded-md ${
-              isActive ? "border bg-primary-600 text-white" : "text-primary-600"
-            }`}
+            className={`flex flex-col justify-center items-center p-1 rounded ${isActive ? "border bg-primary-600 text-white" : "text-primary-600"
+              }`}
           >
             <span className="text-xl">{item.icon}</span>
             <p
-              className={`text-xs text-center ${
-                isActive ? "text-white" : "text-secondary-medium/50"
-              } inline`}
+              className={`text-xs text-center ${isActive ? "text-white" : "text-secondary-medium/50"
+                } inline`}
             >
               {item.title}
             </p>

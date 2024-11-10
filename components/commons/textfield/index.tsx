@@ -30,7 +30,7 @@ export default function Textfield({
         disabled={disabled}
         onChange={(e) => setValue(e.target.value)}
         value={value}
-        className="bg-white disabled:bg-gray-200 disabled:cursor-not-allowed outline-none border text-secondary-medium rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 min-w-32"
+        className="bg-white disabled:bg-gray-200 disabled:cursor-not-allowed outline-none border text-secondary-medium rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 min-w-32"
         id={name}
         type={type || "text"}
         placeholder={placeholder}

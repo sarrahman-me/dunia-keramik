@@ -34,18 +34,17 @@ export default function Button({
     } else if (onClick) {
       onClick();
     } else {
-      () => {};
+      () => { };
     }
   };
 
   return (
     <button
       disabled={disabled}
-      onClick={disabled ? () => {} : handleClick}
+      onClick={disabled ? () => { } : handleClick}
       type={type}
-      className={`${fullWidth ? "w-full" : ""} ${
-        loading ? "opacity-50" : ""
-      } p-1.5 px-2.5 bg-primary-600 text-white rounded-md hover:shadow-md disabled:bg-primary-600/50 disabled:cursor-not-allowed`}
+      className={`${fullWidth ? "w-full" : ""} ${loading ? "opacity-50" : ""
+        } p-1.5 px-2.5 bg-primary-600 text-white rounded hover:shadow disabled:bg-primary-600/50 disabled:cursor-not-allowed`}
     >
       <span className="flex justify-center items-center">
         {startIcon && !loading && <span className="mr-2">{startIcon}</span>}

@@ -107,8 +107,8 @@ const Kalkulator = () => {
       </form>
 
       {/* hasil perhitungan */}
-      <div className="bg-white border rounded-md p-1 md:p-2 space-y-3">
-        <p className="bg-secondary text-primary-900 p-0.5 rounded-md font-medium text-lg">
+      <div className="bg-white border rounded p-1 md:p-2 space-y-3">
+        <p className="bg-secondary text-primary-900 p-0.5 rounded font-medium text-lg">
           Hasil Perhitungan
         </p>
         <DisplayData title="Kebutuhan" data={`${result.kebutuhan || 0} Dus`} />

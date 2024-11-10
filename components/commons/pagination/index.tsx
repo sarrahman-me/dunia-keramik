@@ -41,7 +41,7 @@ export default function Pagination({
   };
 
   return (
-    <div className="flex py-3 items-center justify-between bg-white shadow-sm text-secondary-medium p-1 md:p-2 rounded-md">
+    <div className="flex py-3 items-center justify-between bg-white shadow-sm text-secondary-medium p-1 md:p-2 rounded">
       {/* prev button */}
       {currentPage > 1 && (
         <div onClick={handlePrevPage} className="text-xl cursor-pointer">
