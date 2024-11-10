@@ -41,7 +41,9 @@ export default async function Home() {
       {/* catalog */}
       <div className="space-y-3">
         <div className="flex justify-between items-center">
-          <p className="underline font-semibold m-2">Semua Barang</p>
+          <p className="p-2 font-medium text-secondary-medium">
+            Semua Barang
+          </p>
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <CatalogProducts />

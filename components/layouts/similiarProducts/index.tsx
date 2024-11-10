@@ -16,7 +16,9 @@ export default function SimiliarProducts({
 
   return (
     <div>
-      <p className="p-2 font-medium text-secondary-medium">Produk Serupa</p>
+      <p className="p-2 font-medium text-secondary-medium">
+        Produk Serupa
+      </p>
       <CatalogProducts
         setLengthProducts={(l) => setSimiliarNotFound(l < 2)}
         pagination={false}

@@ -1,7 +1,6 @@
 import { PostDataApi } from "@/utils/fetcher";
 import { cookies } from "next/headers";
 import CatalogProducts from "../catalogProducts";
-import IBarangWebstore from "@/interfaces/barang-webstore";
 
 interface TrackedProduct {
   sku: string;

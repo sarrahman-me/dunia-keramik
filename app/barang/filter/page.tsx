@@ -13,7 +13,7 @@ export default function Page({
   return (
     <div>
       <SearchBar />
-      <p className="underline font-semibold m-2">
+      <p className="p-2 font-medium text-secondary-medium">
         Pilihan {searchParams.kategori} {searchParams.ukuran} {searchParams.motif}
       </p>
       <Suspense fallback={<div>Loading...</div>}>

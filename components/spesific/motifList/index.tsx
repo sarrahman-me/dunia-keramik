@@ -41,7 +41,9 @@ export default function MotifList() {
   return (
     <div className="my-2">
       <div className="flex justify-between items-center">
-        <p className="underline font-semibold m-2">Pilihan Motif</p>
+        <p className="p-2 font-medium text-secondary-medium">
+          Pilihan Motif
+        </p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
         {motifList?.map((motif) => (

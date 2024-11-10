@@ -13,9 +13,9 @@ export function trackProduct(sku: string) {
     productsTracker = JSON.parse(currentData);
   }
 
-  const threeDaysInMillisecond = 3 * 24 * 60 * 60 * 1000;
+  const threeDaysInMillisecond = 7 * 24 * 60 * 60 * 1000;
 
-  // Hapus produk yang sudah lebih dari 3 hari
+  // Hapus produk yang sudah lebih dari 7 hari
   productsTracker = productsTracker.filter(
     (product) => Date.now() - product.timestamp <= threeDaysInMillisecond
   );
