@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Dunia Keramik Samarinda",
   },
   description: "Toko Keramik Dan Granit terlengkap di Samarinda",
-  applicationName: "Toko Keramik Indonesia",
+  applicationName: "Dunia Keramik Samarinda",
   authors: {
     name: "Muhammad Nur Rahman",
     url: "https://www.linkedin.com/in/sarrahman-me",
