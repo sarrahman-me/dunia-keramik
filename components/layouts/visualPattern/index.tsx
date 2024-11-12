@@ -1,13 +1,15 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import { Select, TipsText } from "@/components/commons";
+import { ButtonVisualizer } from "@/components/spesific";
 import React, { useState } from "react";
 
 type VisualPatternProps = {
   imageUrl: string;
+  sku: string
 };
 
-export default function VisualPattern({ imageUrl }: VisualPatternProps) {
+export default function VisualPattern({ imageUrl, sku }: VisualPatternProps) {
   const [natColor, setNatColor] = useState("#ababab");
   const [natGap, setNatGap] = useState("2px");
   const [gridSize, setGridSize] = useState(4);
@@ -94,6 +96,9 @@ export default function VisualPattern({ imageUrl }: VisualPatternProps) {
               }}
             />
           </form>
+
+          <ButtonVisualizer sku={sku} />
+
         </div>
       </div>
     </div>
