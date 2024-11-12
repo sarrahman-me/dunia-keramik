@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppBar, BottomBarNavigation } from "@/components/layouts";
 import { Analytics } from "@vercel/analytics/react"
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,6 +50,7 @@ export default async function RootLayout({
           <BottomBarNavigation />
         </div>
       </body>
+      <GoogleAnalytics gaId="G-ZN7V9PF8KN" />
       <Analytics />
     </html>
   );
