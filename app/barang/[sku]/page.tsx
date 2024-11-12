@@ -8,7 +8,7 @@ import {
   VisualPattern,
 } from "@/components/layouts";
 import { Metadata } from "next";
-import { ButtonPesanWhatsapp } from "@/components/spesific";
+import { ButtonPesanWhatsapp, ButtonVisualizer } from "@/components/spesific";
 
 export async function generateMetadata({
   params,
@@ -64,6 +64,9 @@ export default async function Page({
             title="Berat"
             data={`${barang.berat / 1000} kg / ${barang.berat} g`}
           />
+
+          <ButtonVisualizer sku={barang.sku} />
+
           {/*
           {webstore.show_price ? (
             <DisplayData title="Harga" data={`${formatCurrency(data.price)}`} />
