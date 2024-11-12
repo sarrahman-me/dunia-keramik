@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { BsBoxSeam } from "react-icons/bs";
 import { MdOutlineDashboard } from "react-icons/md";
-import { TbTools } from "react-icons/tb";
+import { TbAugmentedReality2, TbTools } from "react-icons/tb";
 
 export const webstore_navigation: {
   title: string;
@@ -18,5 +18,9 @@ export const webstore_navigation: {
     {
       title: "Kalkulator",
       icon: <TbTools />,
+    },
+    {
+      title: "Visualizer",
+      icon: <TbAugmentedReality2 />,
     },
   ];

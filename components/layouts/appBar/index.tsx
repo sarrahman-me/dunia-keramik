@@ -18,6 +18,7 @@ export default function AppBar({
     Home: `/`,
     Barang: `/barang`,
     Kalkulator: `/kalkulator`,
+    Visualizer: `/visualizer`
   };
 
   return (

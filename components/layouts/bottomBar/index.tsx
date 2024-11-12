@@ -11,10 +11,11 @@ export default function BottomBarNavigation() {
     Home: `/`,
     Barang: `/barang`,
     Kalkulator: `/kalkulator`,
+    Visualizer: `/visualizer`
   };
 
   return (
-    <aside className="bg-white grid grid-cols-3 p-1 rounded shadow-lg select-none">
+    <aside className="bg-white grid grid-cols-4 p-1 rounded shadow-lg select-none">
       {webstore_navigation.map((item, i) => {
         const isActive = isActivePage(
           navigationMap[item.title],
