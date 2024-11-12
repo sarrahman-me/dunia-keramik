@@ -1,4 +1,4 @@
-import { SearchBar } from "@/components/commons";
+import { SearchBar, WhatsappIcon } from "@/components/commons";
 import { CatalogProducts } from "@/components/layouts";
 import { Metadata } from "next";
 import { Suspense } from "react";
@@ -15,6 +15,10 @@ export default function Home() {
       <Suspense fallback={<div>Loading...</div>}>
         <CatalogProducts />
       </Suspense>
+
+
+      {/* Whatsapp icon */}
+      <WhatsappIcon />
     </div>
   )
 }
