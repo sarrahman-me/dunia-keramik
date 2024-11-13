@@ -39,10 +39,10 @@ export default function AreaListComp() {
           Rekomendasi Setiap Ruangan
         </p>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-2 md:grid-cols-4">
         {AreaList?.map((area) => (
           <div
-            onClick={() => router.push(`/rooms/${area.slug}`)}
+            onClick={() => router.push(`/barang/rooms/${area.slug}`)}
             key={area.title}
             className="p-2 cursor-pointer relative"
           >
