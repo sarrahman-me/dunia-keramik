@@ -23,7 +23,7 @@ interface resultInterface {
 export default function CatalogProducts({
   atributQuery,
   pagination = true,
-  limit = 48,
+  limit = 35,
   setLengthProducts,
   products = [],
   staticData,
