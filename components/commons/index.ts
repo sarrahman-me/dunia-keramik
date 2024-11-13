@@ -1,5 +1,6 @@
 import Button from "./button";
 import CardProduct from "./cardProduct";
+import ChatBubble from "./chatBubble";
 import DisplayData from "./displayData";
 import FileInput from "./fileInput";
 import ImageProductWithPreview from "./imageProductWithPreview";
@@ -26,5 +27,6 @@ export {
   Textfield,
   SwitchToggle,
   FileInput,
-  WhatsappIcon
+  WhatsappIcon,
+  ChatBubble
 }
