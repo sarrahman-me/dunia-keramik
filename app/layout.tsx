@@ -30,6 +30,9 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="id">
+      <head>
+        <meta name="google-site-verification" content="uxJGUa8ROS677Ksm9gM_kc3xryC-7ds5t0_VEHoOBqU" />
+      </head>
       <body className={`bg-secondary min-h-screen ${inter.className}`}>
         <AppBar />
         <div className="mx-auto max-w-7xl p-2 md:p-4 lg:p-6">{children}</div>
