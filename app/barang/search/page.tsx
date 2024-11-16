@@ -1,7 +1,6 @@
-import { SearchBar, WhatsappIcon } from "@/components/commons";
+import { CardProduct, SearchBar, WhatsappIcon } from "@/components/commons";
 import NotFound404 from "@/public/svg/product-404.svg";
 import { MdSearch } from "react-icons/md";
-import { CatalogProducts } from "@/components/layouts";
 import Image from "next/image";
 import { GetDataApi } from "@/utils/fetcher";
 import IBarang from "@/interfaces/barang";
@@ -22,13 +21,21 @@ export default async function Page({
 }: {
   searchParams: { query: string };
 }) {
-  const responseBarang = await GetDataApi(
-    `${process.env.NEXT_PUBLIC_HOST}/products?limit=100&query=${searchParams.query}`
+  //const responseBarang = await GetDataApi(
+  //  `${process.env.NEXT_PUBLIC_HOST}/products?limit=100&query=${searchParams.query}`
+  //);
+  //
+  //const barang: IBarang[] = responseBarang.data.data;
+
+  const responseAlgolia = await GetDataApi(
+    `${process.env.NEXT_PUBLIC_HOST}/search/${searchParams.query}`
   );
 
-  const barang: IBarang[] = responseBarang.data.data;
+  const algoliaHint = responseAlgolia.data;
 
-  if (barang.length === 0) {
+  const products = algoliaHint.data.hits;
+
+  if (products.length === 0) {
     return (
       <div className="space-y-4">
         <SearchBar route={`/barang/search`} />
@@ -60,11 +67,17 @@ export default async function Page({
           <p>Hasil pencarian untuk &quot;{searchParams.query}&quot;</p>
         </span>
       )}
-      <CatalogProducts
-        pagination={false}
-        staticData
-        products={barang}
-      />
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2">
+        {products?.map((product: IBarang, i: number) => (
+          <CardProduct
+            route={
+              `/barang/${product.sku}`
+            }
+            key={i}
+            barang={product}
+          />
+        ))}
+      </div>
 
       {/* Whatsapp icon */}
       <WhatsappIcon />
