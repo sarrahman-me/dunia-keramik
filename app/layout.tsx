@@ -42,7 +42,7 @@ export default async function RootLayout({
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.tokokeramik.com"
+              href="https://main.dtusqppnb0kst.amplifyapp.com/"
               className="underline text-primary-600/80"
             >
               tokokeramik.com
